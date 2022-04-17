@@ -2,8 +2,6 @@
 mbr = {};
 
 yRange = 1;
-xRangeMax =-1.5;
-xRangeMax =0.5;
 
 xRangeMin = -1.5;
 xRangeMax = 0.5;
