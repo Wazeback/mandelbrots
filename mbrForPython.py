@@ -3,10 +3,10 @@ mbr = [];
 
 yRange = 1;
 
-xRangeMin = -2;
-xRangeMax = 1;
+xRangeMin = -1.5;
+xRangeMax = 0.5;
 
-scale = 100;
+scale = 50;
 maxI = 1000;
 
 
@@ -19,7 +19,7 @@ xGlobalOffset = xRangeMin*scale;
 
 for yGlobal in range(yGlobalOffset, yRange*scale + 1):
     mbr.append("");
-    for xGlobal in range(xGlobalOffset, xRangeMax*scale):
+    for xGlobal in range(int(xGlobalOffset), int(xRangeMax*scale)):
         x = 0;
         y = 0;
         x0 = xGlobal/scale;
@@ -41,3 +41,5 @@ for yGlobal in range(yGlobalOffset, yRange*scale + 1):
 
 for yGlobal in range(yGlobalOffset, yRange*scale + 1):
     print(mbr[yGlobal-yGlobalOffset]);
+
+
