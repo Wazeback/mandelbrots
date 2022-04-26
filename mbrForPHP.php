@@ -41,11 +41,9 @@
                     $mbr[$yGlobal][$xGlobal] = "#";
                 } else {
                     $mbr[$yGlobal][$xGlobal] = "&nbsp;";
-                    $mbr[$yGlobal][$xGlobal] = ".";
                 }
                 echo($mbr[$yGlobal][$xGlobal]);
-                echo(".");
-                //document.write("&nbsp;");
+                echo("&nbsp;");
             }
             echo("<br>");
         }
