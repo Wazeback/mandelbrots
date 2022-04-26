@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mbrForJavascript</title>
+</head>
+<body>
+
+</body>
+
+<script> 
+     
+    let mbr = [];
+
+    let yRange = 1;
+    let maxI = 1000;
+
+    let xRangeMin = -1.5;
+    let xRangeMax = 0.5;
+
+    let scale = 50;
+
+
+    for (let yGlobal = -1*yRange*scale; yGlobal < yRange*scale; yGlobal++) {
+        mbr[yGlobal] = [];
+        for (let xGlobal = xRangeMin*scale; xGlobal < xRangeMax*scale; xGlobal++) {
+            let x = 0;
+            let y = 0;
+            let x0 = xGlobal/scale;
+            let y0 = yGlobal/scale;
+
+            let i = 0;
+
+            while(x*x + y*y <= 4 && i < maxI){
+                xTemp = x*x - y*y + x0;
+                y = 2*x*y + y0;
+                x = xTemp;
+                i = i+1;s
+            }
+
+            if(i == maxI){
+                mbr[yGlobal][xGlobal] = "#";
+            } else {
+                mbr[yGlobal][xGlobal] = "&nbsp;";
+                mbr[yGlobal][xGlobal] = ".";
+            }
+            document.write(mbr[yGlobal][xGlobal]);
+            document.write(".");
+            //document.write("&nbsp;");
+        }
+        document.write("<br>");
+    }
+
+</script>
+</html>
